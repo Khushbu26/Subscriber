@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Product Detail</title>
+ </head>
+<body>
+<div align="center">
+    <h1>Product List</h1>
+    
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Collection Id</th>
+                <th>Product Id</th>
+                <th>Position</th>
+                <th>Sort value</th>
+                <th>Created At</th>
+                <th>Updated At</th>
+			</tr>
+        </thead>
+        <tbody>
+            <tr th:each="product : ${listproduct}">
+            	<td th:text="${product.c_id}">Collection Id</td>
+               	<td th:text="${product.p_id}">Product Id</td>
+               	<td th:text="${product.position}">Position</td>
+               	<td th:text="${product.sort_value}">Sort value</td>
+               	<td th:text="${product.created_at}">Created At</td>
+               	<td th:text="${product.updated_at}">Updated At</td>
+            </tr>
+        </tbody>
+    </table>
+</div>    
+</body>
+</html>
